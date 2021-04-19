@@ -3,13 +3,13 @@ import time
 from selenium import webdriver  # импортируем webdriver
 
 driver = webdriver.Chrome()
-
+driver.maximize_window()
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
 
 menu = driver.find_element_by_class_name('mobile_button').click()
 pools = driver.find_element_by_link_text('Pools').click()
-time.sleep(2)
+
 close = driver.find_element_by_css_selector('.first_level>.close').click()
 DFX_BUSD = driver.find_element_by_css_selector('.header>.lp').click()
 
