@@ -11,8 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 #pools = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.ID, "pools")))
-pools = driver.find_element_by_id('pools')
-
+pools = driver.find_element_by_css_selector('.menu>#pools')
 pools.click()
 
 DFX_BUSD = driver.find_element_by_css_selector('.header>.lp').click()
