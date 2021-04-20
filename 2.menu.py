@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-pools = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.LINK_TEXT, "Pools")))
+pools = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.ID, "pools")))
 pools.click()
 
 DFX_BUSD = driver.find_element_by_css_selector('.header>.lp').click()
