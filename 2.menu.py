@@ -1,10 +1,11 @@
+import time
 from selenium import webdriver  # импортируем webdriver
 
 driver = webdriver.Chrome()
-driver.get('https://defirex.org/')
 driver.maximize_window()
+driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
-
+time.sleep(1)
 DFX_Airdrop = driver.find_element_by_link_text('DFX Airdrop').click()
 current_window = driver.current_window_handle
 assert driver.current_url == "https://defirex.org/airdrop-dfx"
