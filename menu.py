@@ -5,8 +5,7 @@ driver.maximize_window()
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
 
-pscr = driver.find_element_by_id('pools')
-pscr.click()
+pscr = driver.find_element_by_id('pools').click()
 
 wiki = driver.find_element_by_id('Wiki').click()
 new_window = driver.window_handles[1]
