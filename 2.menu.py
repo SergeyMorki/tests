@@ -5,7 +5,7 @@ driver.maximize_window()
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
 
-wiki = driver.find_element_by_link_text('Wiki').click()
+wiki = driver.find_element_by_id('Wiki').click()
 new_window = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
