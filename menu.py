@@ -5,7 +5,7 @@ driver.maximize_window()
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
 
-DFX_Airdrop = driver.find_element_by_link_text('DFX Airdrop').click()
+DFX_Airdrop = driver.find_element_by_id('airDrop_dfx').click()
 current_window = driver.current_window_handle
 assert driver.current_url == "https://defirex.org/airdrop-dfx"
 driver.close()
@@ -19,12 +19,6 @@ new_window = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
 assert driver.current_url == "https://wiki.defirex.org/"
-driver.close()
-driver.switch_to.window(current_window)
-
-DFX_Airdrop = driver.find_element_by_link_text('DFX Airdrop').click()
-current_window = driver.current_window_handle
-assert driver.current_url == "https://defirex.org/airdrop-dfx"
 driver.close()
 driver.switch_to.window(current_window)
 
