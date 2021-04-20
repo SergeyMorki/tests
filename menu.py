@@ -4,8 +4,10 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
+from selenium.webdriver.common.action_chains import ActionChains
 
-pscr = driver.find_element_by_id('pools').click()
+button = driver.find_element_by_id('pools')
+ActionChains(driver).move_to_element(button).click(button).perform()
 
 wiki = driver.find_element_by_id('Wiki').click()
 new_window = driver.window_handles[1]
