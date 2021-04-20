@@ -1,14 +1,9 @@
-import time
-
 from selenium import webdriver  # импортируем webdriver
 
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 wiki = driver.find_element_by_link_text('Wiki').click()
 new_window = driver.window_handles[1]
