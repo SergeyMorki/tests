@@ -6,8 +6,12 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-pools = driver.find_element_by_link_text('Pools').click()
+medium = WebDriverWait(driver, 20).until(		# говорим Selenium проверять в течение 20 секунд, пока кнопка не станет кликабельной
+        EC.element_to_be_clickable((By.LINK_TEXT, "Pools")))
 
 DFX_BUSD = driver.find_element_by_css_selector('.header>.lp').click()
 
