@@ -44,4 +44,5 @@ owners_in_BSC = driver.find_element_by_id('funds_owners_bsc')
 link_owners_BSC = owners_in_BSC.get_attribute('href')
 assert link_owners_BSC == 'https://bscscan.com/token/0x308853AeC7cF0ECF133ed19C0c1fb3b35f5a4E7B#balances'
 
+driver.close()
 driver.quit()

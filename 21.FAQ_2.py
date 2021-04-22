@@ -8,4 +8,5 @@ driver.implicitly_wait(5)
 
 How_we_manage = driver.find_element_by_id('mat-expansion-panel-header-1')
 How_we_manage.click()
+driver.close()
 driver.quit()

@@ -36,4 +36,5 @@ current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
 
 assert driver.current_url == "https://bscscan.com/address/0xca0648c5b4cea7d185e09fcc932f5b0179c95f17#tokentxns"
+driver.close()
 driver.quit()
