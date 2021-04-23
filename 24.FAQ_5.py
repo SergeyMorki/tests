@@ -10,7 +10,7 @@ driver.implicitly_wait(5)
 audit_secure = driver.find_element_by_id('mat-expansion-panel-header-4').click()
 
 report = driver.find_element_by_id('Audit').click()
-time.sleep(2)
+time.sleep(3)
 new_window = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
