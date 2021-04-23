@@ -7,7 +7,6 @@ driver.maximize_window()
 
 driver.get('https://defirex.org/')
 driver.implicitly_wait(5)
-#pools = .pools.curr1.ng-star-inserted
 pool = driver.find_element_by_css_selector('.pools.curr1.ng-star-inserted>:nth-child(2)').click()
 pooltext = driver.find_element_by_css_selector('.pools.curr1.ng-star-inserted>:nth-child(2)>:nth-child(1)>.header>.lp>:nth-child(2)>:nth-child(1)')
 text1 = pooltext.text
