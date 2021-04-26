@@ -13,6 +13,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 balance_on_compound = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.ID, "Balance_on_Compound")))
 balance_on_compound.click()
+time.sleep(3)
 new_window = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
