@@ -18,7 +18,7 @@ driver.close()
 driver.switch_to.window(current_window)
 
 report = driver.find_element_by_id('guide').click()
-new_window1 = driver.window_handles[2]
+new_window1 = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window1)
 assert driver.current_url == "https://defirex.org/assets/data/autonome_client_instruction_en.pdf"
