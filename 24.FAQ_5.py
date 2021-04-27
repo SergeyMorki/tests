@@ -10,10 +10,10 @@ driver.implicitly_wait(5)
 audit_secure = driver.find_element_by_id('mat-expansion-panel-header-4').click()
 
 report = driver.find_element_by_id('Audit').click()
-time.sleep(3)
-new_window = driver.window_handles[1]
+time.sleep(5)
+newwindow = driver.window_handles[1]
 current_window = driver.current_window_handle
-driver.switch_to.window(new_window)
+driver.switch_to.window(newwindow)
 assert driver.current_url == "https://github.com/pessimistic-io/audits/blob/main/DeFireX%20Security%20Audit%20by%20Pessimistic%20Public.pdf"
 driver.close()
 driver.switch_to.window(current_window)
