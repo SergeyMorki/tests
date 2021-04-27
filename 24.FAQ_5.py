@@ -10,17 +10,17 @@ driver.implicitly_wait(5)
 audit_secure = driver.find_element_by_id('mat-expansion-panel-header-4').click()
 report = driver.find_element_by_id('Audit').click()
 time.sleep(5)
-newwindow = driver.window_handles[1]
+new_window = driver.window_handles[2]
 current_window = driver.current_window_handle
-driver.switch_to.window(newwindow)
+driver.switch_to.window(new_window)
 assert driver.current_url == "https://github.com/pessimistic-io/audits/blob/main/DeFireX%20Security%20Audit%20by%20Pessimistic%20Public.pdf"
 driver.close()
 driver.switch_to.window(current_window)
 
 report = driver.find_element_by_id('guide').click()
-new_window = driver.window_handles[1]
+new_window1 = driver.window_handles[3]
 current_window = driver.current_window_handle
-driver.switch_to.window(new_window)
+driver.switch_to.window(new_window1)
 assert driver.current_url == "https://defirex.org/assets/data/autonome_client_instruction_en.pdf"
 driver.close()
 driver.switch_to.window(current_window)
