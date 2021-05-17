@@ -42,5 +42,6 @@ driver.switch_to.window(current_window)
 
 owners_in_BSC = driver.find_element_by_id('funds_owners_bsc')
 
+
 driver.close()
 driver.quit()
