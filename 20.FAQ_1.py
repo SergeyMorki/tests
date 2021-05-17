@@ -12,7 +12,7 @@ What_is = driver.find_element_by_id('mat-expansion-panel-header-0')
 What_is.click()
 What_is.click()
 
-code_on_github = driver.find_element_by_link_text('See code on GitHub').click()
+code_on_github = driver.find_element_by_id('source_github').click()
 new_window = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
