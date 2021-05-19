@@ -73,7 +73,7 @@ DFX_funds = driver.find_element_by_link_text('DFX funds holders').click()
 new_window = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
-assert driver.current_url == "https://www.bscscan.com/token/0x11340dC94E32310FA07CF9ae4cd8924c3cD483fe"
+assert driver.current_url == "https://www.bscscan.com/token/0x74b3abb94e9e1ecc25bd77d6872949b4a9b2aacf"
 driver.close()
 driver.switch_to.window(current_window)
 
