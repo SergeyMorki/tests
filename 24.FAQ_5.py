@@ -8,20 +8,6 @@ driver.implicitly_wait(5)
 
 current_window = driver.current_window_handle
 audit_secure = driver.find_element_by_id('mat-expansion-panel-header-4').click()
-report = driver.find_element_by_id('Audit').click()
-while True:
-    try:
-        new_window = driver.window_handles[1]
-    except IndexError:
-        continue
-    else:
-        break
-        time.sleep(5)
-
-driver.switch_to.window(new_window)
-assert driver.current_url == "https://github.com/pessimistic-io/audits/blob/main/DeFireX%20Security%20Audit%20by%20Pessimistic%20Public.pdf"
-driver.close()
-driver.switch_to.window(current_window)
 
 instructions = driver.find_element_by_id('guide').click()
 new_window1 = driver.window_handles[1]
@@ -32,5 +18,6 @@ driver.close()
 driver.switch_to.window(current_window)
 
 client = driver.find_element_by_id('autonome_client')
+report = driver.find_element_by_id('Audit').click()
 
 driver.quit()
