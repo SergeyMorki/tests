@@ -77,6 +77,7 @@ assert driver.current_url == "https://www.bscscan.com/token/0x74b3abb94e9e1ecc25
 driver.close()
 driver.switch_to.window(current_window)
 
+
 Guarantees = driver.find_element_by_link_text('Guarantees').click()
 bsc_holders = driver.find_element_by_css_selector('.cdk-overlay-pane>:nth-child(1)>:nth-child(1)>:nth-child(6').click()
 btcb = driver.find_element_by_link_text('BTCB funds holders').click()
