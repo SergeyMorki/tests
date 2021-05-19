@@ -34,6 +34,3 @@ driver.switch_to.window(current_window)
 client = driver.find_element_by_id('autonome_client')
 
 driver.quit()
-
-
-
