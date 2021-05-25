@@ -8,7 +8,7 @@ def price():
     pricedot = driver.find_element_by_css_selector('.stat_box>.right>:nth-child(2)>.number_string_style').text
     if pricedot != '$0':
         f = open('price.txt', 'w')
-        f.write(pricedot)
+        f.write('Quack ' + pricedot)
         f.close()
     driver.close()
 
@@ -21,7 +21,7 @@ def priceDFX():
     priceDFX = driver.find_element_by_css_selector('.stat>:nth-child(3)>:nth-child(1)>:nth-child(2)>:nth-child(2)').text
     if priceDFX != '$0':
         f = open('priceDFX.txt', 'w')
-        f.write(priceDFX)
+        f.write('DFX ' + priceDFX)
         f.close()
     driver.close()
 
@@ -38,7 +38,7 @@ def priceDFR():
     priceDFR = driver.find_element_by_css_selector('.sc-fodVxV.eMewAm>.sc-jGVbCA>:nth-child(2)>:nth-child(1)').text
     if priceDFR != '$0':
         f = open('priceDFR.txt', 'w')
-        f.write(priceDFR)
+        f.write('DFR ' + priceDFR)
         f.close()
     driver.close()
 price()
