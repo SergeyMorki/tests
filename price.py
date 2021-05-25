@@ -31,12 +31,10 @@ def priceDFR():
     driver.get(
         'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xe1cd8169c3c78446ab94ca5db333ccf70172e2cb&outputCurrency=0x74b3abb94e9e1ecc25bd77d6872949b4a9b2aacf')
     driver.implicitly_wait(10)
-    import pyautogui
-
     intro = driver.find_element_by_id('understand-checkbox').click()
     contin = driver.find_element_by_class_name('token-dismiss-button').click()
-    amountDFR = driver.find_element_by_css_selector('#swap-currency-input>.sc-ihnbgO>.sc-gYhigD>.sc-ksXhwv').click()
-    pyautogui.press('1')
+    amountDFR = driver.find_element_by_css_selector('#swap-currency-input>.sc-ihnbgO>.sc-gYhigD>.sc-ksXhwv')
+    amountDFR.send_keys('1')
     priceDFR = driver.find_element_by_css_selector('.sc-fodVxV.eMewAm>.sc-jGVbCA>:nth-child(2)>:nth-child(1)').text
     if priceDFR != '$0':
         f = open('priceDFR.txt', 'w')
