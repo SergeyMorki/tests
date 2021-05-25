@@ -33,6 +33,7 @@ def priceDFR():
     driver.implicitly_wait(10)
     intro = driver.find_element_by_id('understand-checkbox').click()
     contin = driver.find_element_by_class_name('token-dismiss-button').click()
+    a = driver.find_element_by_css_selector('.sc-fodVxV.eMewAm').click()
     amountDFR = driver.find_element_by_css_selector('#swap-currency-input>.sc-ihnbgO>.sc-gYhigD>.sc-ksXhwv').send_keys('1')
     priceDFR = driver.find_element_by_css_selector('.sc-fodVxV.eMewAm>.sc-jGVbCA>:nth-child(2)>:nth-child(1)').text
     if priceDFR != '$0':
