@@ -43,7 +43,7 @@ elif text1 == 'BTCB':
     input3.send_keys('123')
 else:
     input2 = driver.find_element_by_css_selector(
-        '.active>.moreInfo>.dep>.mat-tab-group>.mat-tab-body-wrapper>.mat-tab-body-active>:nth-child(1)>:nth-child(2)>.input>:nth-child(1)')
+        '.active>.moreInfo>.dep>.mat-tab-group>.mat-tab-body-wrapper>.mat-tab-body-active>:nth-child(1)>:nth-child(1)>:nth-child(1)>:nth-child(1)')
     input2.send_keys('123')
 
 pool2 = driver.find_element_by_css_selector('.pools.curr1.ng-star-inserted>:nth-child(4)').click()
