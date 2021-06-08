@@ -82,8 +82,8 @@ elif text1 == 'BTCB':
         '.active>.moreInfo>.dep>.mat-tab-group>.mat-tab-body-wrapper>.mat-tab-body-active>:nth-child(1)>:nth-child(1)>.input>:nth-child(1)')
     input3.send_keys('123')
 else:
-    input2 = driver.find_element_by_css_selector(
-        '.active>.moreInfo>.dep>.mat-tab-group>.mat-tab-body-wrapper>.mat-tab-body-active>:nth-child(1)>:nth-child(2)>.input>:nth-child(1)')
+    input2 = driver.find_element_by_id(
+        'mat-input-8')
     input2.send_keys('123')
 
 driver.quit()
