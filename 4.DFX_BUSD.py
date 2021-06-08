@@ -36,7 +36,7 @@ driver.switch_to.window(current_window)
 add_liq_Defirex = driver.find_element_by_link_text('Add Liquidity using DeFireX').click()
 max = driver.find_element_by_css_selector('.mat-form-field-suffix.ng-star-inserted').click()
 input1 = driver.find_element_by_id('mat-input-12')
-input1.click()
+
 input1.send_keys(123)
 input2 = driver.find_element_by_id('mat-input-13')
 input2.click()
