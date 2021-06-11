@@ -18,6 +18,7 @@ DAI_funds_holders = driver.find_element_by_link_text('DAI funds holders').click(
 new_window = driver.window_handles[1]
 current_window = driver.current_window_handle
 driver.switch_to.window(new_window)
+print(driver.current_url)
 assert driver.current_url == "https://etherscan.io/token/0xfACd9A6fD887855d9432F7a080911b26d9DCAE01"
 driver.close()
 driver.switch_to.window(current_window)
